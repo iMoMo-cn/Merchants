@@ -1,0 +1,8 @@
+entity.Villager.merchants.SeedMerchant=Seed Merchant
+entity.Villager.merchants.Butcher=Butcher
+entity.Villager.merchants.Wizard=Wizard
+entity.Villager.merchants.Miner=Miner
+entity.Villager.merchants.Botanist=Botanist
+entity.Villager.merchants.Sculptor=Sculptor
+entity.Villager.merchants.Engineer=Engineer
+
