@@ -2,7 +2,7 @@
 {
   "modid": "merchants",
   "name": "Merchants",
-  "description": "Many villagers have been added. You can trade with them what the minecraft villagers can't trade such as egg, seed, and feather.",
+  "description": "Many villagers have been added. Trade with them and see what interesting things they're selling!",
   "version": "1.0.0",
   "mcversion": "1.12.2",
   "url": "",

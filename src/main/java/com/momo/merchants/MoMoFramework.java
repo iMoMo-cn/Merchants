@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = MoMoFramework.MODID, name = MoMoFramework.NAME, version = MoMoFramework.VERSION)//dependencies = "required-after:Forge@[14.23.5.2705,)"
 public class MoMoFramework {
     public static final String MODID = "merchants";
-    public static final String NAME = "name";
+    public static final String NAME = "merchants";
     public static final String VERSION = "1.0.0";
 
     public static Logger logger;
