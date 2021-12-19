@@ -165,22 +165,24 @@ public class VillagerRegistryHandler {
         //sculptor add trade
         SCULPTOR_CAREER.addTrade(1,
                 new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE),
-                        new EntityVillager.PriceInfo(20,26)),
-        new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE), 1,
-                new EntityVillager.PriceInfo(16,21))
+                        new EntityVillager.PriceInfo(20,26))
         );
         SCULPTOR_CAREER.addTrade(2,
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE), 3,
+                        new EntityVillager.PriceInfo(16,21)),
                 new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE), 2,
                         new EntityVillager.PriceInfo(16,21)),
-                new ModMerchantRecipes.ItemForEmerald(Items.CLAY_BALL, new EntityVillager.PriceInfo(8,10))
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE), 1,
+                        new EntityVillager.PriceInfo(16,21))
+
         );
         SCULPTOR_CAREER.addTrade(3,
+                new ModMerchantRecipes.ItemAForItemB(Items.EMERALD, new EntityVillager.PriceInfo(1,1),
+                        Items.CLAY_BALL, new EntityVillager.PriceInfo(8,10)),
                 new ModMerchantRecipes.ItemAEmeraldForItemB(
                         Item.getItemFromBlock(Blocks.COBBLESTONE), new EntityVillager.PriceInfo(10,10),
-                        new EntityVillager.PriceInfo(1,1),
-                        Item.getItemFromBlock(Blocks.GRAVEL), new EntityVillager.PriceInfo(6,10)),
-                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.STONE), 3,
-                        new EntityVillager.PriceInfo(16,21))
+                            new EntityVillager.PriceInfo(1,1),
+                                Item.getItemFromBlock(Blocks.GRAVEL), new EntityVillager.PriceInfo(6,10))
         );
         SCULPTOR_CAREER.addTrade(4,
                 new ModMerchantRecipes.ItemForEmerald(Items.QUARTZ,
