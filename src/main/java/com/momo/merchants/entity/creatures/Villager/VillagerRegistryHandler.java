@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
+import java.util.Random;
+
 @Mod.EventBusSubscriber
 public class VillagerRegistryHandler {
     //seed_merchant
@@ -189,19 +191,21 @@ public class VillagerRegistryHandler {
         //botanist add trade
         BOTANIST_CAREER.addTrade(1,
                 new ModMerchantRecipes.EmeraldForItem(Items.BEETROOT,
-                        new EntityVillager.PriceInfo(18,22))
+                        new EntityVillager.PriceInfo(18,22)),
+                new ModMerchantRecipes.EmeraldForItem(Items.POISONOUS_POTATO,
+                        new EntityVillager.PriceInfo(1,2))
         );
         BOTANIST_CAREER.addTrade(2,
-                new ModMerchantRecipes.EmeraldForItem(Items.POISONOUS_POTATO,
-                        new EntityVillager.PriceInfo(1,2)),
-                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.CACTUS),
-                        new EntityVillager.PriceInfo(24,36))
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.RED_MUSHROOM),
+                        new EntityVillager.PriceInfo(16, 21)),
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.BROWN_MUSHROOM),
+                        new EntityVillager.PriceInfo(16, 21))
         );
         BOTANIST_CAREER.addTrade(3,
-                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.RED_MUSHROOM),
-                        new EntityVillager.PriceInfo(16,21)),
-                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.BROWN_MUSHROOM),
-                        new EntityVillager.PriceInfo(16,21))
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.CACTUS),
+                            new EntityVillager.PriceInfo(24,36)),
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.VINE),
+                        new EntityVillager.PriceInfo(24,36))
         );
         BOTANIST_CAREER.addTrade(4,
                 new ModMerchantRecipes.EmeraldForItem(Items.CHORUS_FRUIT,
