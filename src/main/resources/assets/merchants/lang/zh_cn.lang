@@ -5,3 +5,5 @@ entity.Villager.merchants.Miner=矿工
 entity.Villager.merchants.Botanist=植物学家
 entity.Villager.merchants.Sculptor=雕刻家
 entity.Villager.merchants.Engineer=工程师
+entity.Villager.merchants.HorseTrainer=驯马师
+entity.Villager.merchants.Florist=花匠

@@ -12,8 +12,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.Random;
-
 @Mod.EventBusSubscriber
 public class VillagerRegistryHandler {
     //seed_merchant
@@ -69,6 +67,33 @@ public class VillagerRegistryHandler {
 
     public static final VillagerRegistry.VillagerCareer BOTANIST_CAREER =
             new VillagerRegistry.VillagerCareer(BOTANIST, MoMoFramework.MODID + ".Botanist");
+
+    //Engineer
+    public static final VillagerRegistry.VillagerProfession ENGINEER =
+            new VillagerRegistry.VillagerProfession(MoMoFramework.MODID + "engineer",
+                    MoMoFramework.MODID + ":textures/entity/villager/engineer.png",
+                    MoMoFramework.MODID + ":textures/entity/zombie_villager/zombie_engineer.png" );
+
+    public static final VillagerRegistry.VillagerCareer ENGINEER_CAREER =
+            new VillagerRegistry.VillagerCareer(ENGINEER, MoMoFramework.MODID + ".Engineer");
+
+    //HorseTrainer
+    public static final VillagerRegistry.VillagerProfession HORSE_TRAINER =
+            new VillagerRegistry.VillagerProfession(MoMoFramework.MODID + "horse_trainer",
+                    MoMoFramework.MODID + ":textures/entity/villager/horse_trainer.png",
+                    MoMoFramework.MODID + ":textures/entity/zombie_villager/zombie_horse_trainer.png" );
+
+    public static final VillagerRegistry.VillagerCareer HORSE_TRAINER_CAREER =
+            new VillagerRegistry.VillagerCareer(HORSE_TRAINER, MoMoFramework.MODID + ".HorseTrainer");
+
+    //Florist
+    public static final VillagerRegistry.VillagerProfession FLORIST =
+            new VillagerRegistry.VillagerProfession(MoMoFramework.MODID + "florist",
+                    MoMoFramework.MODID + ":textures/entity/villager/florist.png",
+                    MoMoFramework.MODID + ":textures/entity/zombie_villager/zombie_florist.png" );
+
+    public static final VillagerRegistry.VillagerCareer FLORIST_CAREER =
+            new VillagerRegistry.VillagerCareer(FLORIST, MoMoFramework.MODID + ".Florist");
 
 
     @SubscribeEvent
@@ -205,7 +230,7 @@ public class VillagerRegistryHandler {
         );
         BOTANIST_CAREER.addTrade(3,
                 new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.CACTUS),
-                            new EntityVillager.PriceInfo(24,36)),
+                        new EntityVillager.PriceInfo(24,36)),
                 new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.VINE),
                         new EntityVillager.PriceInfo(24,36))
         );
@@ -216,5 +241,96 @@ public class VillagerRegistryHandler {
                         new EntityVillager.PriceInfo(5,10))
         );
         registry.register(BOTANIST);
+
+        //engineer add trade
+        ENGINEER_CAREER.addTrade(1,
+                new ModMerchantRecipes.EmeraldForItem(Items.REDSTONE,
+                        new EntityVillager.PriceInfo(53,64))
+        );
+        ENGINEER_CAREER.addTrade(2,
+                new ModMerchantRecipes.ItemForEmerald(Items.REPEATER,
+                        new EntityVillager.PriceInfo(1, 3)),
+                new ModMerchantRecipes.ItemForEmerald(Items.COMPARATOR,
+                        new EntityVillager.PriceInfo(2, 4))
+        );
+        ENGINEER_CAREER.addTrade(3,
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DAYLIGHT_DETECTOR),
+                        new EntityVillager.PriceInfo(4,7)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.OBSERVER),
+                        new EntityVillager.PriceInfo(2,4))
+        );
+        ENGINEER_CAREER.addTrade(4,
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.PISTON),
+                        new EntityVillager.PriceInfo(3,6)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.STICKY_PISTON),
+                        new EntityVillager.PriceInfo(5,8))
+        );
+        registry.register(ENGINEER);
+
+        //horse_trainer add trade
+        HORSE_TRAINER_CAREER.addTrade(1,
+                new ModMerchantRecipes.EmeraldForItem(Items.GOLDEN_CARROT,
+                        new EntityVillager.PriceInfo(7,9))
+        );
+        HORSE_TRAINER_CAREER.addTrade(2,
+                new ModMerchantRecipes.ItemAEmeraldForItemB(
+                        Items.LEATHER, new EntityVillager.PriceInfo(5,7),
+                            new EntityVillager.PriceInfo(5,10),
+                                Items.SADDLE, new EntityVillager.PriceInfo(1,1)),
+                new ModMerchantRecipes.ItemForEmerald(Items.LEAD,
+                        new EntityVillager.PriceInfo(8, 9))
+        );
+        HORSE_TRAINER_CAREER.addTrade(3,
+                new ModMerchantRecipes.ItemAEmeraldForItemB(
+                        Items.IRON_INGOT, new EntityVillager.PriceInfo(6,8),
+                            new EntityVillager.PriceInfo(5,10),
+                                Items.IRON_HORSE_ARMOR, new EntityVillager.PriceInfo(1,1))
+        );
+        HORSE_TRAINER_CAREER.addTrade(4,
+                new ModMerchantRecipes.ItemAEmeraldForItemB(
+                        Items.GOLD_INGOT, new EntityVillager.PriceInfo(6,8),
+                            new EntityVillager.PriceInfo(5,10),
+                                Items.GOLDEN_HORSE_ARMOR, new EntityVillager.PriceInfo(1,1))
+        );
+        HORSE_TRAINER_CAREER.addTrade(5,
+                new ModMerchantRecipes.ItemAEmeraldForItemB(
+                        Items.DIAMOND, new EntityVillager.PriceInfo(6,8),
+                            new EntityVillager.PriceInfo(5,10),
+                                Items.DIAMOND_HORSE_ARMOR, new EntityVillager.PriceInfo(1,1))
+        );
+        registry.register(HORSE_TRAINER);
+
+        //florist add trade
+        FLORIST_CAREER.addTrade(1,
+                new ModMerchantRecipes.EmeraldForItem(Items.DYE,15,
+                        new EntityVillager.PriceInfo(16,22))
+        );
+        FLORIST_CAREER.addTrade(2,
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.TALLGRASS),1,
+                        new EntityVillager.PriceInfo(42,54)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.TALLGRASS),2,
+                        new EntityVillager.PriceInfo(1, 2))
+        );
+        FLORIST_CAREER.addTrade(3,
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.RED_FLOWER),
+                        new EntityVillager.PriceInfo(8,13)),
+                new ModMerchantRecipes.EmeraldForItem(Item.getItemFromBlock(Blocks.YELLOW_FLOWER),
+                        new EntityVillager.PriceInfo(8,13))
+        );
+        FLORIST_CAREER.addTrade(4,
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DOUBLE_PLANT),0,
+                        new EntityVillager.PriceInfo(2, 4)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DOUBLE_PLANT),1,
+                        new EntityVillager.PriceInfo(2, 4)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DOUBLE_PLANT),4,
+                        new EntityVillager.PriceInfo(2, 4)),
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DOUBLE_PLANT),5,
+                        new EntityVillager.PriceInfo(2, 4))
+        );
+        FLORIST_CAREER.addTrade(5,
+                new ModMerchantRecipes.ItemForEmerald(Item.getItemFromBlock(Blocks.DEADBUSH),
+                        new EntityVillager.PriceInfo(2, 3))
+        );
+        registry.register(FLORIST);
     }
 }

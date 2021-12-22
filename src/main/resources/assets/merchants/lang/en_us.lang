@@ -5,4 +5,6 @@ entity.Villager.merchants.Miner=Miner
 entity.Villager.merchants.Botanist=Botanist
 entity.Villager.merchants.Sculptor=Sculptor
 entity.Villager.merchants.Engineer=Engineer
+entity.Villager.merchants.HorseTrainer=Horse Trainer
+entity.Villager.merchants.Florist=Florist
 
