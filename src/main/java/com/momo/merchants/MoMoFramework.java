@@ -115,8 +115,6 @@ public class MoMoFramework {
     private static void RegisterTileEntity() {
 //        GameRegistry.registerTileEntity(TileEntityDeBoomOrb.class, new ResourceLocation(MODID, "deboom_orb_basic"));
 
-        //GameRegistry.registerTileEntity(TileEntityBuilderFarm.class, new ResourceLocation(MODID, "builder_farm_basic"));
-        //GameRegistry.registerTileEntity(TileEntityBuilderOne.class, new ResourceLocation(MODID, "builder.builder_one"));
     }
 
     public static void LogWarning(String str, Object... args) {

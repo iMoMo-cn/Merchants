@@ -25,7 +25,6 @@ import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.UUID;
 
-import static com.momo.merchants.util.IDLSkillNBT.GetGuaEnhance;
 
 public class ItemBase extends Item implements IHasModel {
 	private boolean overrideRarity = false;
@@ -93,10 +92,6 @@ public class ItemBase extends Item implements IHasModel {
 
 	public void InitItem()
 	{
-		if (this instanceof IGuaEnhance)
-		{
-			showGuaSocketDesc = true;
-		}
 	}
 
 	public boolean isRangedWeaponItem()

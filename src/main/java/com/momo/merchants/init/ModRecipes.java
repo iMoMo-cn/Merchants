@@ -19,7 +19,7 @@ public class ModRecipes {
 	@SubscribeEvent
 	public static void registerRecipes(RegistryEvent.Register<IRecipe> evt) {
 		IForgeRegistry<IRecipe> r = evt.getRegistry();
-		//Example
-		//r.register(new GobletFill().setRegistryName(new ResourceLocation(Reference.MOD_ID, "goblet_fill")));
+
+
 	}
 }

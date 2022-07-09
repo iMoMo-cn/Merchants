@@ -1,7 +1,6 @@
 package com.momo.merchants.network.protocols;
 
 import com.momo.merchants.MoMoFramework;
-import com.momo.merchants.item.skills.ItemSkillBase;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -54,14 +53,6 @@ public class PacketTest implements IMessage {
                     MoMoFramework.LogWarning("Trying to cast an empty item");
                 }
 
-                if(item.getItem() instanceof ItemSkillBase)
-                {
-                    ItemSkillBase skill = (ItemSkillBase) item.getItem();
-                    if (skill.canCast(player.world, player, hand))
-                    {
-                        skill.tryCast(player.world, player, hand);
-                    }
-                }
             });
             return null;
         }

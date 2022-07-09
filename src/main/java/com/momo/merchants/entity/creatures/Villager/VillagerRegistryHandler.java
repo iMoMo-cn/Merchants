@@ -245,7 +245,7 @@ public class VillagerRegistryHandler {
         //engineer add trade
         ENGINEER_CAREER.addTrade(1,
                 new ModMerchantRecipes.EmeraldForItem(Items.REDSTONE,
-                        new EntityVillager.PriceInfo(53,64))
+                        new EntityVillager.PriceInfo(23,34))
         );
         ENGINEER_CAREER.addTrade(2,
                 new ModMerchantRecipes.ItemForEmerald(Items.REPEATER,
